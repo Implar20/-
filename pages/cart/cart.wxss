@@ -1,0 +1,175 @@
+page {
+    background-color: rgba(239, 243, 246, 1);
+}
+.container {
+    width: 100%;
+}
+.header {
+    width: 100%;
+    height: 86rpx;
+    background-color: #fff;
+    margin-top: 20rpx;
+}
+.header view {
+    display: inline-block;
+    width: 120rpx;
+    height: 40rpx;
+    color: rgba(205, 39, 35, 1);
+    font-size: 24rpx;
+    margin-left: 20rpx;
+    margin-top: 28rpx;
+}
+/* .header .header_edit {
+    margin-left: 530rpx;
+    color: rgb(196, 196, 194);
+    font-size: 24rpx;
+    margin-top: 28rpx;
+} */
+.header .icon_text {
+    width: 60rpx;
+    height: 36rpx;
+    background-color: red;
+    margin-left: 20rpx;
+    border-radius: 50rpx;
+    color: #fff;
+    font-size: 20rpx;
+    text-align: center;
+    line-height: 36rpx;
+}
+.content {
+    width: 100%;
+}
+.content .content_item {
+    width: 100%;
+    height: 230rpx;
+    background-color: rgba(248, 248, 248, 1);
+    position: relative;
+}
+.content_item navigator {
+    width: 170rpx;
+    height: 170rpx;
+}
+.content_item .content_pic {
+    width: 100%;
+    height: 100%;
+    margin-left: 24rpx;
+    margin-top: 17rpx;
+}
+.content_item .content_title {
+    position: absolute;
+    top: 17rpx;
+    left: 214rpx;
+    font-size: 24rpx;
+    color: #000;
+    width: 320rpx;
+    height: 70rpx;
+}
+.content_item .content_price {
+    position: absolute;
+    top: 8rpx;
+    left: 590rpx;
+    font-size: 24rpx;
+    color: rgba(255, 64, 64, 1)
+}
+/* .content_item .content_sale {
+    position: absolute;
+    top: 59rpx;
+    left: 214rpx;
+    width: 155rpx;
+    height: 35rpx;
+    color: rgba(155, 155, 155, 1);
+    font-size: 20rpx;
+} */
+.content_item .content_icon {
+    position: absolute;
+    right: 20rpx;
+    top: 50rpx;
+}
+.content_item .content_del {
+    position: absolute;
+    bottom: 28rpx;
+    right: 20rpx;
+    width: 34rpx;
+    height: 34rpx;
+}
+.content_item .content_select {
+    position: absolute;
+    bottom: 16rpx;
+    left: 214rpx;
+    width: 220rpx;
+    height: 60rpx;
+    background-color: #f8f8f8;
+    border-radius: 12rpx;
+    border: 1rpx solid #d8d8d8;
+    overflow: hidden;
+}
+.content_select .min {
+    position: absolute;
+    top: 5rpx;
+    left: 18rpx;
+    width: 36rpx;
+    height: 36rpx;
+}
+.content_select .add {
+    position: absolute;
+    top: 5rpx;
+    right: 8rpx;
+    width: 36rpx;
+    height: 36rpx;
+}
+.content_select .num {
+    position: absolute;
+    width: 110rpx;
+    height: 60rpx;
+    background-color: #fff;
+    margin-left: 50rpx;
+    text-align: center;
+    border: 0 solid #e5e5e5;
+    border-left-width: 1px;
+    border-right-width: 1px;
+    font-size: 24rpx;
+    color: #000;
+    line-height: 60rpx;
+}
+.content .content_mask {
+    width: 100%;
+    height: 100rpx;
+    background-color: rgba(239, 243, 246, 1);
+}
+.footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 100rpx;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+}
+.footer .footer_icon {
+    margin-left: 20rpx;
+}
+.footer .footer_all {
+    color: rgba(74, 74, 74, 1);
+    font-size: 24rpx;
+    margin-left: 22rpx;
+}
+.footer .footer_total {
+    margin-left: 226rpx;
+    font-size: 24rpx;
+    color: rgba(74, 74, 74, 1);
+}
+.footer .footer_totalPrice {
+    color: rgba(255, 64, 64, 1);
+    font-size: 24rpx;
+}
+.footer .footer_btn {
+    position: absolute;
+    right: 0;
+    width: 200rpx;
+    height: 100%;
+    background-color: rgba(255, 64, 64, 1);
+    text-align: center;
+    line-height: 100rpx;
+    font-size: 32rpx;
+    color: #fff;
+}

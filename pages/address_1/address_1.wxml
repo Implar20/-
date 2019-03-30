@@ -1,0 +1,21 @@
+<view class="content">
+    <view class="content_item" wx:for="{{ address }}">
+        <view class="item_header">
+            <icon wx:if="{{ selected }}" type="success" size="23" color="white"/>
+            <icon wx:else type="circle" size="23" color="white"/>
+            <text>默认地址</text> 
+            <image src="../../img/shop/del.png" bindtap="delData" data-index="{{ index }}"></image>
+        </view>
+        <view class="item_content">
+            <text class="item_name">收货人：{{ item.name }}</text>
+            <text class="item_tel">{{ item.tel }}</text>
+            <text class="item_addr">地址：{{ item.addr.pro }}-{{ item.addr.city }}-{{ item.addr.row }} {{ item.addr.more }}</text>
+            <image src="../../img/shop/edit.png" bindtap="editAddr" data-index="{{ index }}"></image>
+        </view>
+    </view>
+    <view class="footer">
+        <view class="footer_btn" bindtap="editAddr">
+            添加新地址
+        </view>
+    </view>
+</view>

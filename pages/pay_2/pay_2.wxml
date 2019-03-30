@@ -1,0 +1,60 @@
+<view class="container">
+    <view class="header">
+        <image class="header_icon" src="../../img/shop/area_2.png"></image>
+        <text class="header_name">收货人：{{ user.name }}</text>
+        <text class="header_tel">{{ user.tel }}</text>
+        <text class="header_addr">地址：{{ user.addr.pro }}-{{ user.addr.city }}-{{ user.addr.area }} {{ user.addr.row }}</text>
+        <image class="header_edit" src="../../img/shop/edit.png" bindtap="editAddr"></image>
+    </view>
+    <view class="line_a"></view>
+    <view class="content_header">
+        <image class="content_pic" src="{{ goods.goodsPic }}"></image>
+        <text class="content_addr">{{ goods.goodsTitle }}</text>
+        <text class="content_price">￥{{ goods.goodsPrice }}</text>
+        <text class="content_total">x{{ goods.goodsTotal }}</text>
+    </view>
+    <view class="section_method">
+        <text>配送方式</text>
+        <text class="method_text">完成下单后可在我的订单里查看</text>
+    </view>
+    <view class="section_account">
+        <text>游戏账号</text>
+        <input placeholder="请输入我们的游戏账号" placeholder-class="pIn"></input>
+    </view>
+    <view class="section_chain">
+        <text>区块链账号</text>
+        <input placeholder="请输入您的区块链账号" placeholder-class="pIn"></input>
+    </view>
+    <view class="section_num">
+        <text>订单编号</text>
+        <text class="num_text">{{ num }}</text>
+    </view>
+    <view class="section_pay">
+        <view class="pay_title">
+            <text>支付方式</text>
+        </view>
+        <view class="pay_content">
+            <text>可选择币种、微信、支付宝、多种支付方式，请点击下方确认付款，详情和人工联系～</text>
+        </view>
+    </view>
+    <view class="section_footer">
+        <view class="footer_header">
+            <view>
+                <image src="../../img/shop/dude.png"></image>
+                <view>人工客服</view>
+            </view>
+        </view>
+        <view class="footer_end">
+            <view class="end_content">
+                <view class="end_text">该订单完成后您将获得48积分，一元等于一积分，满一100免费</view>
+                <view class="end_yun">运费：¥18.0元</view>
+            </view>
+        </view>
+    </view>
+    <view class="footer">
+        <text>应付款金额：</text><text class="footer_price">{{ goods.goodsPrice * goods.goodsTotal }}</text>
+        <view class="footer_btn">
+            请确认付款
+        </view>
+    </view>
+</view>

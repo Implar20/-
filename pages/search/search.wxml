@@ -1,0 +1,55 @@
+<view class="container">
+    <view class="header" wx:if="{{ !hasData }}">
+        <view class="search">
+            <image src="../../img/index/search_icon.png"></image>
+            <input 
+                placeholder="请输入搜索商品名称" 
+                placeholder-class="pcholder" 
+                bindconfirm="inputC" 
+                bindinput="inputI" 
+                confirm-type="search"
+                focus="true"
+            ></input>
+        </view>
+        <text wx:if="{{ !has }}" bindtap="cancel">取消</text>
+        <text wx:else bindtap="cancel">确定</text>
+    </view>
+    <view class="header_else" wx:if="{{ hasData }}">
+        <view class="search_else" bindtap="search">
+            <image src='../../img/index/search_icon_b.png'></image>
+            <text>请输入搜索商品</text>
+        </view>
+    </view>
+    <view class="content" wx:if="{{ !hasData }}">
+        <view class="content_header">最近搜索</view>
+        <view class="content_line"></view>
+        <view class="search_item" wx:for="{{ search_item }}" wx:key="*this">
+            <view class="item_text">{{ item }}</view>
+        </view>
+    </view>
+    <view wx:else class="content_end">
+        <view class="content_item" wx:for="{{ list_now }}" wx:key="goodsId">
+            <view class="content_in">
+                <navigator url="../shop/shop?id={{ item.goodsId }}">
+                    <image class="item_pic" src="{{ item.goodsCover }}"></image>
+                </navigator>
+                <view class="item_title">
+                    {{ item.goodsName }}
+                </view>
+                <view class="item_bla">
+                    <text>已售{{ item.goodsSaleVolume }}</text>
+                    <text class="item_lastPrice">￥{{ item.goodsMarkedPrices }}</text>
+                </view>
+                <image class='dot_line' src='../../img/index/line.png'></image>
+                <view class="store">
+                    <view class="store_left">库存：</view>
+                    <view class="store_right">{{ item.goodsStock }}</view>
+                </view>
+                <view class="price">
+                    <view class="price_left">现价：</view>
+                    <view class="price_right">￥{{ item.goodsPrices }}</view>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>

@@ -1,0 +1,40 @@
+<view class="container">
+    <view class="header">
+        <view class="header_clean" bindtap="clear_carts">清空购物车</view>
+        <!-- <text class="header_edit" bindtap="edit_carts">编辑</text> -->
+    </view>
+    <view class="content">
+        <view class="content_item" wx:for="{{ carts }}" wx:key="goodsId">
+            <navigator url="../shop/shop">
+                <image class="content_pic" src="{{ item.goodsPic }}"></image>
+            </navigator>
+            <view class="content_title">
+                {{ item.goodsTitle }}
+            </view>
+            <view class="content_price">
+                ￥{{ item.goodsPrice }}
+            </view>
+            <!-- <text class="content_sale">
+                已销售：{{ item.sale }}
+                库存：{{ item.store }}
+            </text> -->
+            <view class="content_select">
+                <view class="min" bindtap="minusCount"  data-index="{{ index }}">-</view>
+                <view class="num">{{ item.goodsItem }}</view>
+                <view class="add" bindtap="addCount"  data-index="{{ index }}">+</view>
+            </view>
+            <icon wx:if="{{ item.goodsSelected }}" type="success" color="red" class="content_icon" bindtap="selectList" data-index="{{ index }}"/>
+            <icon wx:else type="circle" class="content_icon" bindtap="selectList" data-index="{{ index }}"/>
+            <image src='../../img/carts/del.png' class="content_del" bindtap="deleteList"></image>
+        </view>
+        <view class="content_mask"></view>
+    </view>
+    <view class="footer">
+        <icon wx:if="{{ !selectAllStatus }}" type="circle" class="footer_icon" bindtap="selectAll"/>
+        <icon wx:else type="success" color="red" class="footer_icon" bindtap="selectAll"/>
+        <text class="footer_all">全选</text>
+        <text class="footer_total">合计：</text>
+        <text class="footer_totalPrice">￥{{ totalPrice }}</text>
+        <view class="footer_btn" bindtap="buyAll">结算 ({{ total }})</view>
+    </view>
+</view>

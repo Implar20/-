@@ -1,0 +1,56 @@
+<view class="container">
+    <swiper
+        indicator-dots
+        autoplay
+        interval="5000"
+        duration="1000"
+        circular
+    >
+        <block wx:for="{{swiper.imgUrls}}" wx:key="*this">
+            <swiper-item>
+                <image src="{{item}}" class="slide-image" width="355" height="150" bindtap="show_pic" data-index="{{ index }}"/>
+            </swiper-item>
+        </block>
+    </swiper>
+    <view class="content">
+        <view class="content_title">
+            {{ test.goodsTitle }}
+        </view>
+        <view class="content_price"> 
+            <text>￥{{ test.goodsPrice }}</text>
+            <text class="last_price">￥{{ test.goodslastPrice }}</text>
+            <button class="content_share" open-type="share" hover-class="share_hover">
+                <image src='../../img/shop/share.png' class="icon_share"></image>
+                <text class="text_share">分享</text>
+            </button>
+        </view>
+        <view class="content_has"> 
+            <view class="has_yun">
+                <view></view>
+                满100：免运费
+            </view>
+            <view class="has_sale">
+                <view></view>
+                已销 {{ test.goodsSale }} 笔
+            </view>
+            <view class="has_has">
+                <view></view>
+                库存：{{ test.goodsStore }}
+            </view>
+        </view>
+        <view class="content_int">商品图文详情</view>
+    </view>
+    <view class="footer">
+        <navigator class="footer_chat" url="../chat/chat">
+            <image src="../../img/shop/chat.png"></image>
+            <text>聊一聊</text>
+        </navigator>
+        <view class="footer_shop" bindtap="toCart">
+            <text>加入购物车</text>
+        </view>
+        <navigator class="footer_buy" url="../pay_2/pay_2">
+            <text>立刻购买</text>
+        </navigator>
+        <image src="../../img/shop/push.png" class="push_carts" style="display:{{ hidden }}"></image>
+    </view>
+</view>

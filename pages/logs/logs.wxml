@@ -1,0 +1,72 @@
+<view class='container'>
+    <view class="header">
+        <text wx:if="{{ log }}" class="header_text">我的</text>
+        <image class="header_chat" src="../../img/chat.png" bindtap="dude"></image>
+        <view wx:if="{{ !log }}" class="header_user">
+            <button open-type="getUserInfo" lang="zh_CN" bindgetuserinfo="onGotUserInfo">
+                登陆
+            </button>
+        </view>
+        <view wx:else class="header_user">
+            <view class="user_pic">
+                <open-data type="userAvatarUrl"></open-data>
+            </view>
+            <open-data type="userNickName" lang="zh_CN" class="user_name"></open-data>
+            <image src="../../img/my/int.png" class="user_icon"></image>
+            <text class="user_text">{{ user.user_int }}.00</text>
+        </view>
+    </view>
+    <view class="btn" bindtap="dude" wx:if="{{ sel }}">
+        <image class="btn_icon" src="../../img/my/dude.png"></image>
+        <view>人工服务</view>
+    </view>
+    <view class="btn" wx:else>
+        <view>当您在购物时，积分自动扣除，减少运费</view>
+    </view>
+    <view class="nav" wx:if="{{ sel }}">
+        <view class="nav_header">
+            <image src="../../img/my/order.png"></image>
+            <text>全部订单</text>
+        </view>
+        <view class="line"></view>
+        <view class="nav_content">
+            <view class="content_item" wx:for="{{ nav }}" data-index="{{ index }}" bindtap="jumpPage">
+                <image src="{{ item.nav_icon }}" style="width:{{ item.width }}rpx;"></image>
+                <text>{{ item.nav_title }}</text>
+            </view>
+        </view>
+    </view>
+    <view wx:if="{{ !sel }}" class="tips">
+        <text>温情提示：积分可赠送</text>
+    </view>
+    <image wx:if="{{ !sel }}" class="bg" src="../../img/bg.png" ></image>
+    <view wx:if="{{ !sel }}" class="tips_inp">
+        <view>
+            <input placeholder="请输入邀请人账号" placeholder-class="pIn"></input>
+        </view>
+        <text bindtap="giveInt">赠送</text>
+    </view>
+    <view class="line_b" wx:if="{{ sel }}"></view>
+    <view class="content" wx:if="{{ sel }}">
+        <view class="content_header">
+            <image class="content_header_icon" src="../../img/my/car.png"></image>
+            <text>常用功能</text>
+        </view>
+        <view class="content_section">
+            <view url="../int/int" class="section_one" bindtap="showInt">
+                <image src="../../img/my/mon.png"></image>
+                <text>我的积分</text>
+                <image src="../../img/my/right.png" class="section_icon"></image>
+            </view>
+            <view class="section_two" bindtap="cleanCache">
+                <image src="../../img/my/clean.png"></image>
+                <text>清理缓存</text>
+            </view>
+            <navigator url="../address_1/address_1" class="section_three">
+                <image src="../../img/my/address.png"></image>
+                <text>收货地址</text>
+                <image src="../../img/my/right.png" class="section_icon"></image>
+            </navigator>
+        </view>
+    </view>
+</view>

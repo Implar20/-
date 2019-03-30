@@ -1,0 +1,29 @@
+<view class="container">
+    <view class="header" bindtap="toShop">
+        <image src="{{ goods.goodsPic }}"></image>
+        <text class="header_title">{{ goods.goodsTitle }}</text>
+        <text class="header_price">￥{{ goods.goodsPrice }}</text>
+    </view>
+    <view class="content">
+        <view class="content_header" bindtap="editAddr">
+            <text>收货地址</text>
+            <view class="header_group">
+                <view class="group_title">{{ user.name }} {{ user.tel }}</view>
+                <view class="group_addr">{{ user.addr }}</view>
+            </view>
+            <image src="../../img/shop/right.png"></image>
+        </view>
+        <view class="content_section">
+            <text>运费</text>
+            <text class="section_price">￥{{ yun }}</text>
+        </view>
+        <view class="content_footer">
+            <text>数量：</text><text class="footer_price">x{{ goods.goodsItem }}</text>
+            <image src="../../img/shop/add.png" bindtap="addCount"></image>
+        </view>
+    </view>
+    <view class="footer">
+        <text>实付款：</text><text class="footer_total">￥{{ goods.goodsItem * goods.goodsPrice + yun }}</text>
+        <view class="footer_btn" bindtap="toCar">确认</view>
+    </view>
+</view>

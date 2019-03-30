@@ -1,0 +1,193 @@
+.container {
+    width: 100%;
+}
+.header {
+    width: 100%;
+    height: 88rpx;
+    background-color: red;
+    display: flex;
+    align-items: center;
+}
+.header .search {
+    width: 626rpx;
+    height: 56rpx;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 200rpx;
+    margin-left: 20rpx;
+    display: flex;
+    align-items: center;
+}
+.search image {
+    width: 36rpx;
+    height: 36rpx;
+    margin-left: 20rpx;
+}
+.search input {
+    width: 500rpx;
+    color: #fff;
+    font-size: 24rpx;
+    margin-left: 20rpx;
+}
+.pcholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+.header text {
+    font-size: 32rpx;
+    color: #fff;
+    width: 64rpx;
+    height: 44rpx;
+    margin-left: 20rpx;
+}
+.content .content_header {
+    margin-left: 20rpx;
+    margin-top: 18rpx;
+    font-size: 28rpx;
+    color: rgb(34, 34, 34);
+}
+.content .content_line {
+    width: 710rpx;
+    height: 2rpx;
+    background-color: rgba(228, 227, 230, 1);
+    margin: 0 auto;
+    margin-top: 20rpx;
+}
+.search_item .item_text {
+    float: left;
+    margin: 30rpx 28rpx 0 20rpx;
+    display: inline-block;
+    padding: 10rpx 30rpx 10rpx 30rpx;
+    background-color: #ddd;
+    border-radius: 40rpx;
+    opacity: 0.4;
+    color: rgb(103, 103, 103);
+    font-size: 24rpx;
+}
+/* 搜索之后的商品页面 */
+.content_end {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.content_end .content_item {
+    margin-top: 15rpx;
+    width: 49%;
+    height: 584rpx;
+    background-color: #eee;
+    position: relative;
+}
+.content_item .content_in {
+    width: 344rpx;
+    height: 570rpx;
+    margin: auto;
+    margin-top: 10rpx;
+}
+.content_in navigator {
+    width: 344rpx;
+    height: 344rpx;
+}
+navigator .item_pic {
+    width: 100%;
+    height: 100%;
+}
+.content_in .item_title {
+    margin-top: 16rpx;
+    font-size: 28rpx;
+    color: rgba(100, 100, 100, 1);
+}
+.content_in .item_bla {
+    margin-top: 8rpx;
+    width: 100%;
+    height: 34rpx;
+    font-size: 24rpx;
+    color: rgba(156, 156, 156, 1);
+}
+.item_bla .item_lastPrice {
+    float: right;
+    text-decoration: line-through;
+}
+.dot_line {
+    width: 100%;
+    height: 6rpx;
+    margin-top: 12rpx;
+}
+.store {
+    width: 150rpx;
+    height: 36rpx;
+    position: absolute;
+    bottom: 20rpx;
+    border: 1px solid red;
+    border-radius: 4rpx;
+}
+.store_left {
+    width: 80rpx;
+    height: 36rpx;
+    background-color: red;
+    font-size: 24rpx;
+    color: #fff;
+    text-align: center;
+    float: left;
+}
+.store_right {
+    width: 68rpx;
+    height: 36rpx;
+    text-align: center;
+    font-size: 24rpx;
+    color: red;
+    float: right;
+}
+.price {
+    position: absolute;
+    right: 0;
+    bottom: 20rpx;
+    width: 160rpx;
+    height: 36rpx;
+}
+.price_left {
+    width: 80rpx;
+    height: 36rpx;
+    font-size: 24rpx;
+    color: rgba(150, 150, 150, 1);
+    text-align: center;
+    float: left;
+}
+.price_right {
+    width: 80rpx;
+    height: 36rpx;
+    font-size: 24rpx;
+    color: red;
+    float: right;
+}
+
+/* 搜索之后的商品页面头部 */
+.header_else {
+    width: 100%;
+    height: 80rpx;
+    background-color: rgba(255, 64, 64, 1);
+    display: flex;
+    align-items: center;
+    color: #fff;
+}
+.header_else .search_else {
+    width: 80%;
+    height: 50rpx;
+    background-color: #fff;
+    border-radius: 200rpx;
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+}
+.search_else image {
+    width: 32rpx;
+    height: 32rpx;
+    margin-left: 24rpx;
+}
+.search_else text {
+    margin: 0 auto;
+    width: 300rpx;
+    height: 50rpx;
+    min-height: 50rpx;
+    font-size: 30rpx;
+    color: #ddd;
+    line-height: 50rpx;
+}

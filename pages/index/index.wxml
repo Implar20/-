@@ -1,0 +1,48 @@
+<view class="container">
+    <view class="header">
+        <view class="search" bindtap="search">
+            <image src='../../img/index/search_icon_b.png'></image>
+            <text>请输入搜索商品</text>
+        </view>
+    </view>
+    <swiper indicator-dots autoplay interval="2500" duration="500" circular >
+        <block wx:for="{{ swiper.imgUrls }}" wx:key="*this">
+            <swiper-item>
+                <image src="{{ item.Pic }}" bindtap="click_swiper" data-index="{{ item.Id }}"/>
+            </swiper-item>
+        </block>
+    </swiper>
+    <view class="nav">
+        <view class="nav_info">
+            <view class="nav_info_item" bindtap="list_request" wx:for="{{ nav.list }}" wx:key="name" data-item="{{ index }}">
+                <image src="{{ nav.list[index].src }}"/>
+                <text>{{ nav.list[index].name }}</text>
+            </view>
+        </view>
+    </view>
+    <view class="content">
+        <view class="content_item" wx:for="{{ list_now }}" wx:key="{{ item }}">
+            <view class="content_in">
+                <navigator url="../shop/shop?id={{ item.goodsId }}">
+                    <image class="item_pic" src="{{ item.goodsCover }}"></image>
+                </navigator>
+                <view class="item_title">
+                    {{ item.goodsName }}
+                </view>
+                <view class="item_bla">
+                    <text>已售{{ item.goodsSaleVolume }}</text>
+                    <text class="item_lastPrice">￥{{ item.goodsMarkedPrices }}</text>
+                </view>
+                <image class='dot_line' src='../../img/index/line.png'></image>
+                <view class="store">
+                    <view class="store_left">库存：</view>
+                    <view class="store_right">{{ item.goodsStock }}</view>
+                </view>
+                <view class="price">
+                    <view class="price_left">现价：</view>
+                    <view class="price_right">￥{{ item.goodsPrices }}</view>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>

@@ -1,0 +1,121 @@
+<view class="container">
+    <view class="header">
+        <view class="{{ currentTab == 0 ? 'active' : '' }}" data-current="0" bindtap="clickTab">全部</view>
+        <view class="{{ currentTab == 1 ? 'active' : '' }}" data-current="1" bindtap="clickTab">待付款</view>
+        <view class="{{ currentTab == 2 ? 'active' : '' }}" data-current="2" bindtap="clickTab">待发货</view>
+        <view class="{{ currentTab == 3 ? 'active' : '' }}" data-current="3" bindtap="clickTab">待收货</view>
+    </view>
+    <swiper current="{{currentTab}}" duration="300"  bindchange="swiperTab" style="height: {{ goods.length * 450 }}rpx">
+        <swiper-item>
+            <view class="content">
+                <view class="content_item" wx:for="{{ goods }}">
+                    <view class="line"></view>
+                    <view class="item_header">
+                        <text>交易中</text>
+                    </view>
+                    <view class="item_content">
+                        <image src="{{ goods[index].goodsPic }}"></image>
+                        <text class="item_content_title">{{ goods[index].goodsTitle }}</text>
+                        <text class="item_content_price">￥{{ goods[index].goodsPrice }}.00</text>
+                        <text class="item_content_lastP">￥{{ goods[index].goodsLastPrice }}.00</text>
+                        <text class="item_content_sale">已销售：{{ goods[index].goodsSale }}</text>
+                        <text class="item_content_store">库存：{{ goods[index].goodsStore }}</text>
+                        <text class="item_content_total">x{{ goods[index].goodsTotal }}</text>
+                    </view>
+                    <view class="item_footer">
+                        <text>共{{ goods[index].goodsTotal }}件商品 合计：￥</text>
+                        <text class="footer_total">{{ goods[index].goodsTotal * goods[index].goodsPrice }}</text>
+                        <text> (含运费￥0.00)</text>
+                        <view class="btn_group">
+                            <view class="footer_btn">查看物流</view>
+                            <view class="footer_btn">联系客服</view>
+                        </view>
+                    </view>
+                </view>
+            </view>
+        </swiper-item>
+        <swiper-item>
+             <view class="content">
+                <view class="content_item" wx:for="{{ goods }}">
+                    <view class="line"></view>
+                    <view class="item_header">
+                        <text>交易中</text>
+                    </view>
+                    <view class="item_content">
+                        <image src="{{ goods[index].goodsPic }}"></image>
+                        <text class="item_content_title">{{ goods[index].goodsTitle }}</text>
+                        <text class="item_content_price">￥{{ goods[index].goodsPrice }}.00</text>
+                        <text class="item_content_lastP">￥{{ goods[index].goodsLastPrice }}.00</text>
+                        <text class="item_content_sale">已销售：{{ goods[index].goodsSale }}</text>
+                        <text class="item_content_store">库存：{{ goods[index].goodsStore }}</text>
+                        <text class="item_content_total">x{{ goods[index].goodsTotal }}</text>
+                    </view>
+                    <view class="item_footer">
+                        <text>共{{ goods[index].goodsTotal }}件商品 合计：￥</text>
+                        <text class="footer_total">{{ goods[index].goodsTotal * goods[index].goodsPrice }}</text>
+                        <text> (含运费￥0.00)</text>
+                        <view class="btn_group">
+                            <view class="footer_btn btn_s">联系客服</view>
+                        </view>
+                    </view>
+                </view>
+            </view>
+        </swiper-item>
+        <swiper-item>
+            <view class="content">
+                <view class="content_item" wx:for="{{ goods }}">
+                    <view class="line"></view>
+                    <view class="item_header">
+                        <text>交易中</text>
+                    </view>
+                    <view class="item_content">
+                        <image src="{{ goods[index].goodsPic }}"></image>
+                        <text class="item_content_title">{{ goods[index].goodsTitle }}</text>
+                        <text class="item_content_price">￥{{ goods[index].goodsPrice }}.00</text>
+                        <text class="item_content_lastP">￥{{ goods[index].goodsLastPrice }}.00</text>
+                        <text class="item_content_sale">已销售：{{ goods[index].goodsSale }}</text>
+                        <text class="item_content_store">库存：{{ goods[index].goodsStore }}</text>
+                        <text class="item_content_total">x{{ goods[index].goodsTotal }}</text>
+                    </view>
+                    <view class="item_footer">
+                        <text>共{{ goods[index].goodsTotal }}件商品 合计：￥</text>
+                        <text class="footer_total">{{ goods[index].goodsTotal * goods[index].goodsPrice }}</text>
+                        <text> (含运费￥0.00)</text>
+                        <view class="btn_group">
+                            <view class="footer_btn">联系客服</view>
+                            <view class="footer_btn">提醒发货</view>
+                        </view>
+                    </view>
+                </view>
+            </view>
+        </swiper-item>
+        <swiper-item>
+             <view class="content">
+                <view class="content_item" wx:for="{{ goods }}">
+                    <view class="line"></view>
+                    <view class="item_header">
+                        <text>交易中</text>
+                    </view>
+                    <view class="item_content">
+                        <image src="{{ goods[index].goodsPic }}"></image>
+                        <text class="item_content_title">{{ goods[index].goodsTitle }}</text>
+                        <text class="item_content_price">￥{{ goods[index].goodsPrice }}.00</text>
+                        <text class="item_content_lastP">￥{{ goods[index].goodsLastPrice }}.00</text>
+                        <text class="item_content_sale">已销售：{{ goods[index].goodsSale }}</text>
+                        <text class="item_content_store">库存：{{ goods[index].goodsStore }}</text>
+                        <text class="item_content_total">x{{ goods[index].goodsTotal }}</text>
+                    </view>
+                    <view class="item_footer">
+                        <text>共{{ goods[index].goodsTotal }}件商品 合计：￥</text>
+                        <text class="footer_total">{{ goods[index].goodsTotal * goods[index].goodsPrice }}</text>
+                        <text> (含运费￥0.00)</text>
+                        <view class="btn_group">
+                            <view class="footer_btn">查看物流</view>
+                            <view class="footer_btn">确认收货</view>
+                        </view>
+                    </view>
+                </view>
+            </view>
+        </swiper-item>
+    </swiper>
+</view>

@@ -1,0 +1,41 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/pay_1/pay_1",
+    "pages/shop/shop",
+    "pages/pay_2/pay_2",
+    "pages/cart/cart",
+    "pages/search/search",
+    "pages/record/record",
+    "pages/address_1/address_1",
+    "pages/address_2/address_2",
+    "pages/chat/chat",
+    "pages/flow/flow"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "多多",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "img/首页.png"
+      },
+      {
+        "pagePath": "pages/cart/cart",
+        "text": "购物车",
+        "iconPath": "img/购物车.png"
+      },
+      {
+        "pagePath": "pages/logs/logs",
+        "text": "个人中心",
+        "iconPath": "img/个人中心.png"
+      }
+    ]
+  }
+}

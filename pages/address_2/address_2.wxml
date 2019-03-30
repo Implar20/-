@@ -1,0 +1,38 @@
+<form class="container">
+    <view class="content">
+        <view class="content_name">
+            <input name="name" placeholder="收货人" placeholder-class="pInp"></input>
+        </view>
+        <view class="line"></view>
+        <view class="content_tel">
+            <input name="tel" placeholder="联系电话" placeholder-class="pInp" type="number"></input>
+        </view>
+        <view class="line"></view>
+        <view class="content_addr">
+            <text>所在地区</text>
+            <text class="addr_text">请选择</text>
+            <image src="../../img/shop/sel.png"></image>
+        </view>
+        <view class="line"></view>
+        <view class="content_row">
+            <text>街道</text>
+            <text class="row_text">请填写</text>
+        </view>
+        <view class="line"></view>
+        <view class="more_row">
+            <textarea name="more_row" placeholder="详细地址" placeholder-class="pTex"></textarea>
+        </view>
+    </view>
+    <picker-view class="picker">
+        <picker-view-column>
+            <view wx:for="{{ sel.pro }}">{{ item }}</view>
+        </picker-view-column>
+        <picker-view-column>
+            <view wx:for="{{ sel.pro }}">{{ item }}</view>
+        </picker-view-column>
+        <picker-view-column>
+            <view wx:for="{{ sel.pro }}">{{ item }}</view>
+        </picker-view-column>
+    </picker-view>
+    <view form-type="submit" class="footer" bindtap="save">保存</view>
+</form>
